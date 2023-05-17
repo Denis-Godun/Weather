@@ -108,7 +108,7 @@ body {
   -ms-grid-row: 1;
   -ms-grid-row-span: 3;
   -ms-grid-column: 1;
-  background-image: url("/images/Temperature Now.png");
+  background-image: url("/img/Temperature Now.png");
   background-repeat: no-repeat;
   background-size: cover;
   grid-area: m;
