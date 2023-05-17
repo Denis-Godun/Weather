@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css\style.css" />
+    <link type="images/clouds.png" href="/favicon ">
+    <title>Weather</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="main-data standart-block">
+        <div class="main-data__clouds">
+          <img src="images\clouds.png" alt="" />
+        </div>
+        <div class="main-data__current-location">
+          <span class="iconify" data-icon="material-symbols:location-on"></span
+          ><span class="main-data__city"></span>
+        </div>
+        <p class="main-data__temperature">
+          <sup class="main-data__degree">°C</sup>
+        </p>
+       
+        <div class="main-data__other">
+          <div class="main-data__block">
+            <div class="main-data__icon">
+              <span
+                class="iconify main-data__iconify"
+                data-icon="mdi:weather-dust"
+              ></span>
+            </div>
+            <div class="main-data__info">
+              <p>Скорость ветра</p>
+              <p id="wind-speed"></p>
+            </div>
+          </div>
+          <div class="main-data__block">
+            <div class="main-data__icon">
+              <span
+                class="iconify main-data__iconify"
+                data-icon="bi:moisture"
+              ></span>
+            </div>
+            <div class="main-data__info">
+              <p>Влажность воздуха</p>
+              <p id="air-humidity"></p>
+            </div>
+          </div>
+          <div class="main-data__block">
+            <div class="main-data__icon">
+              <span
+                class="iconify main-data__iconify"
+                data-icon="bi:cloud-rain-fill"
+              ></span>
+            </div>
+            <div class="main-data__info">
+              <p>Осадки</p>
+              <p id="rainfall"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="air-data standart-block">
+        <h2 class="air-data__title">
+          <span
+            class="iconify"
+            style="font-size: 22px"
+            data-icon="ion:leaf"
+          ></span>
+          Качество воздуха
+        </h2>
+        <div class="air-data__general">
+          <p>Отлично</p>
+          <p>21</p>
+        </div>
+        <div class="air-data__other-list">
+          <div class="air-data__item">
+            <p>55</p>
+            <p>PM2.5</p>
+          </div>
+          <div class="air-data__item">
+            <p>55</p>
+            <p>PM10</p>
+          </div>
+          <div class="air-data__item">
+            <p>55</p>
+            <p>sO₂</p>
+          </div>
+          <div class="air-data__item">
+            <p>55</p>
+            <p>NO₂</p>
+          </div>
+          <div class="air-data__item">
+            <p>55</p>
+            <p>O₃</p>
+          </div>
+          <div class="air-data__item">
+            <p>55</p>
+            <p>CO</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="sun-data standart-block">
+        <h2 class="sun-data__title">
+          <span
+            class="iconify"
+            style="font-size: 22px"
+            data-icon="ph:sun-fill"
+          ></span>
+          Время заката
+        </h2>
+
+        <div class="sun-data__chart-wrapper">
+          <div class="sun-data__sun-chart">
+            <div class="sun-data__chart">
+              <img src="images\sun-chart.svg" alt="" />
+            </div>
+            <time class="sun-data__now">17:48</time>
+          </div>
+        </div>
+        <div class="sun-data__time">
+          <time class="sunrise">06:00</time>
+          <time class="sunset">18:52</time>
+        </div>
+      </div>
+
+      <div class="week-data standart-block">
+        <div class="week-data__element">
+          <h3 class="week-data__title">Сегодня</h3>
+          <div class="week-data__img">
+            <span
+              class="iconify iconify-week"
+              style="font-size: 50px"
+              data-icon="twemoji:cloud-with-lightning-and-rain"
+            ></span>
+          </div>
+          <span class="week-data__temperature-day">21°</span>
+        </div>
+        <div class="week-data__element">
+          <h3 class="week-data__title">Сегодня</h3>
+          <div class="week-data__img">
+            <span
+              class="iconify iconify-week"
+              style="font-size: 50px"
+              data-icon="twemoji:cloud-with-rain"
+            ></span>
+          </div>
+          <span class="week-data__temperature-day">21°</span>
+        </div>
+        <div class="week-data__element">
+          <h3 class="week-data__title">Сегодня</h3>
+          <div class="week-data__img">
+            <span
+              class="iconify iconify-week"
+              style="font-size: 50px"
+              data-icon="twemoji:cloud-with-snow"
+            ></span>
+          </div>
+          <span class="week-data__temperature-day">21°</span>
+        </div>
+        <div class="week-data__element">
+          <h3 class="week-data__title">Сегодня</h3>
+          <div class="week-data__img">
+            <span
+              class="iconify iconify-week"
+              style="font-size: 50px"
+              data-icon="twemoji:sun"
+            ></span>
+          </div>
+          <span class="week-data__temperature-day">21°</span>
+        </div>
+        <div class="week-data__element">
+          <h3 class="week-data__title">Сегодня</h3>
+          <div class="week-data__img">
+            <span
+              class="iconify iconify-week"
+              style="font-size: 50px"
+              data-icon="twemoji:sun-behind-rain-cloud"
+            ></span>
+          </div>
+          <span class="week-data__temperature-day">21°</span>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+
+    <script src="js\script.js"></script>
+  </body>
+</html>
