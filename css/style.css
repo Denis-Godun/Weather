@@ -72,7 +72,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-  background-image: url("/Weather/img/bg.jpg");
+  background-image: url("/../img/bg.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -108,7 +108,7 @@ body {
   -ms-grid-row: 1;
   -ms-grid-row-span: 3;
   -ms-grid-column: 1;
-  background-image: url("/Weather/img/cloudsBG.png");
+  background-image: url("/../img/cloudsBG.png");
   background-repeat: no-repeat;
   background-size: cover;
   grid-area: m;
