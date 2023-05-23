@@ -98,24 +98,42 @@ function dayData(days) {
   let oneDayTemperature = document.querySelectorAll(
     ".week-data__temperature-day"
   );
+  let iconifyWeek = document.querySelectorAll(".iconify-week");
   console.log(days.data);
   let daysData = days.data;
   for (let i = 0; i < daysData.length - 1; i++) {
     const date = new Date(daysData[i + 1].datetime);
     const dayOfWeek = daysOfWeek[date.getDay()];
-    console.log(dayOfWeek);
-    console.log(daysData[i]);
-    console.log(oneDayTitle[i]);
     oneDayTemperature[i].textContent = `${Math.round(
       daysData[i + 1].app_max_temp
     )} °`;
     oneDayTitle[i].textContent = dayOfWeek;
+    console.log(daysData[i].weather.code);
+    switch (daysData[i].weather.code) {
+      case 800:
+        iconifyWeek[i].setAttribute("data-icon", "twemoji:sun");
+        break;
+      case 801, 802:
+        iconifyWeek[i].setAttribute("data-icon", "twemoji:cloud");
+        break;
+      case 803:
+        iconifyWeek[i].setAttribute(
+          "data-icon",
+          "twemoji:sun-behind-rain-cloud"
+        );
+        break;
+      case 200:
+        iconifyWeek[i].setAttribute("data-icon", "cloud-with-lightning");
+        break;
+      case 500,501,502,520,521,522:
+        iconifyWeek[i].setAttribute("data-icon", "twemoji:cloud-with-rain");
+        break;
+      case 600,601,602:
+        iconifyWeek[i].setAttribute("data-icon", "twemoji:cloud-with-snow");
+        break;
+        case 701,741:
+        iconifyWeek[i].setAttribute("data-icon", "twemoji:fog");
+        break;
+    }
   }
 }
-
-// const dateStr = "2023-05-22";
-// const date = new Date(dateStr);
-// const daysOfWeek = ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"];
-// const dayOfWeek = daysOfWeek[date.getDay()];
-
-// console.log(`День недели: ${dayOfWeek}`);
