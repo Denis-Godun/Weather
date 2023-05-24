@@ -113,7 +113,8 @@ function dayData(days) {
       case 800:
         iconifyWeek[i].setAttribute("data-icon", "twemoji:sun");
         break;
-      case 801, 802:
+      case 801:
+      case 802:
         iconifyWeek[i].setAttribute("data-icon", "twemoji:cloud");
         break;
       case 803:
@@ -125,14 +126,30 @@ function dayData(days) {
       case 200:
         iconifyWeek[i].setAttribute("data-icon", "cloud-with-lightning");
         break;
-      case 500,501,502,520,521,522:
+      case 500:
+      case 501:
+      case 502:
+      case 520:
+      case 521:
+      case 522:
         iconifyWeek[i].setAttribute("data-icon", "twemoji:cloud-with-rain");
         break;
-      case 600,601,602:
+      case 600:
+      case 601:
+      case 602:
+      case 611:
+      case 612:
         iconifyWeek[i].setAttribute("data-icon", "twemoji:cloud-with-snow");
         break;
-        case 701,741:
+      case 701:
+      case 741:
+      case 711:
+      case 721:
         iconifyWeek[i].setAttribute("data-icon", "twemoji:fog");
+        break;
+      case 751:
+      case 761:
+        iconifyWeek[i].setAttribute("data-icon", "game-icons:sandstorm");
         break;
     }
   }
